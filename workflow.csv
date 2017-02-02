@@ -1,0 +1,5 @@
+step,protocol,dependencies
+SplitBamPerCell,./protocols/SplitBamPerCell.sh,
+DeduplicateBams,./protocols/DeduplicateBams.sh,SplitBamPerCell
+FeatureCounts,./protocols/FeatureCounts.sh,DeduplicateBams
+CountsToMatrix,./protocols/CountsToMatrix.sh,FeatureCounts

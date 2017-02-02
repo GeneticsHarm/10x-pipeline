@@ -1,0 +1,38 @@
+########################################################################
+## General parameters for SLURM settings and cluster directory paths
+#
+queue,medium
+defaultInterpreter,#!/bin/bash
+stage,module load
+checkStage,module list
+WORKDIR,/groups/
+root,${WORKDIR}
+group,umcg-wijmenga
+tmp,tmp04
+resDir,/groups/umcg-wijmenga/tmp04/resources/
+toolDir,/apps/software/
+projectDir,/groups/umcg-wijmenga/tmp04/umcg-hbrugge/projects/10xpipelineTemplate/
+jdkVersion,1.8.0_25
+### SplitBam
+bamToolsPath,/groups/umcg-wijmenga/tmp04/umcg-hbrugge/apps/bam-per-cell-1.0.jar
+bamPath,/groups/umcg-wijmenga/tmp04/umcg-mdam/bamFile6kcells10XGenomics/pbmc6k_possorted_genome_bam.bam
+barcodePath,/groups/umcg-wijmenga/tmp04/umcg-mdam/bamFile6kcells10XGenomics/barcodes.tsv
+splitBamDir,${projectDir}/splitBam
+### DedupBam
+umiToolsDir,/groups/umcg-wijmenga/tmp04/umcg-hbrugge/apps/UMI-tools/umi_tools/dedup.py
+deduppedBamDir,${projectDir}/deduppedBam
+pythonVersion,2.7.11-foss-2015b
+cythonVersion,0.22-foss-2015b-Python-2.7.9
+futureVersion,0.15.2-foss-2015b-Python-2.7.9
+pysamVersion,0.9.0-foss-2015b-Python-2.7.11
+pandasVersion,0.18.0-foss-2015b-Python-2.7.11
+numpyVersion,1.10.4-foss-2015b-Python-2.7.11
+scipyVersion,0.17.0-foss-2015b-Python-2.7.11
+matplotlibVersion,1.5.1-foss-2015b-Python-2.7.11
+### FeatureCounts
+featureCountsPath,/home/umcg-hbrugge/group-home/tools/subread-1.5.1-Linux-x86_64/bin/featureCounts
+humanGtf,/apps/data/ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf
+countsDir,${projectDir}/counts/
+### CountsToMatrix
+countsToMatrixPath,/groups/umcg-wijmenga/tmp04/umcg-hbrugge/apps/counts-to-matrix-1.0.jar
+matrixDir,${projectDir}matrix/

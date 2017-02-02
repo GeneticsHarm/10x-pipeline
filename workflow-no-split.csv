@@ -1,0 +1,4 @@
+step,protocol,dependencies
+DeduplicateBams,./protocols/DeduplicateBams.sh,
+FeatureCounts,./protocols/FeatureCounts.sh,DeduplicateBams
+CountsToMatrix,./protocols/CountsToMatrix.sh,FeatureCounts
